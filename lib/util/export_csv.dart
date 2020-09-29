@@ -2,18 +2,13 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:flutter_file_dialog/flutter_file_dialog.dart';
 import 'package:share_extend/share_extend.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:timmer/models/flight_history.dart';
+import 'package:timmer/util/get_app_path.dart';
 
 String filePath;
 
-Future<String> get _localPath async {
-  final directory = await getApplicationSupportDirectory();
-  return directory.absolute.path;
-}
-
 Future<File> getFile(String name) async {
-  final path = await _localPath;
+  final path = await localPath;
   filePath = '$path/$name.csv';
   return File('$path/$name.csv').create();
 }

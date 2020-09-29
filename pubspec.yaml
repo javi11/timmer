@@ -26,6 +26,7 @@ dependencies:
       url: https://github.com/javi11/user_location_plugin.git
       ref: fix/location-direction-inverted
   flutter_map: any
+  flutter_downloader: ^1.4.4
   provider: ^4.0.0
   auto_size_text: ^2.1.0
   flutter_lottie: any
@@ -68,6 +69,7 @@ flutter:
     - assets/icons/plain_marker.svg
     - assets/icons/plain_start.svg
     - assets/icons/plain_end.svg
+    - assets/offlineMap/
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -45,11 +45,13 @@ class BottomBar extends StatelessWidget {
                             width: 5,
                           ),
                           roundButton(
-                              Icon(
-                                Icons.clear,
-                                color: Colors.black,
-                              ),
-                              onExit),
+                              Center(
+                                  child: Text(
+                                'STOP',
+                                style: TextStyle(color: Colors.white),
+                              )),
+                              onExit,
+                              Colors.red),
                           SizedBox(
                             height: 24,
                             width: 5,

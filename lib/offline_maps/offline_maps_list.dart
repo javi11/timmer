@@ -1,18 +1,8 @@
-import 'dart:math';
-
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_animator/flutter_animator.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
-import 'package:timmer/home/widgets/clipped_parts.dart';
-import 'package:timmer/home/widgets/drawer.dart';
-import 'package:timmer/home/widgets/history.dart';
-import 'package:timmer/providers/history_provider.dart';
-import 'package:timmer/tracking/tracking_page.dart';
-import 'package:timmer/widgets/app_title.dart';
+import 'package:timmer/offline_maps/map_selection.dart';
 
 class OfflineMapsPage extends StatefulWidget {
   OfflineMapsPage({Key key}) : super(key: key);
@@ -44,7 +34,11 @@ class _OfflineMapsPageState extends State<OfflineMapsPage> {
             children: <Widget>[
               Material(
                 child: InkWell(
-                  onTap: () => null,
+                  onTap: () => Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.downToUp,
+                          child: MapSelectionPage())),
                   child: ListTile(
                     contentPadding: EdgeInsets.only(
                         top: 10, bottom: 10, right: 20, left: 20),
